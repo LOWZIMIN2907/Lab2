@@ -24,16 +24,16 @@ def find_min_max(float_list): # Input parameter: List
 
 def sort_temperature(float_list): # Input parameter: List
     print("sort_temperature")
-    return sorted(float_list) # Return type: List of Floats sorted in ascending order
+    return sorted(float_list) # Return type: List of Floats sorted in ascending order, To sort in descending order, use sorted(float_list, reverse=True).
 
 def calc_median_temperature(float_list): # Input parameter: List
     print("calc_median_temperature")
     sorted_list = sorted(float_list)
-    n = len(float_list)
+    n = len(float_list) #length of the float list   
 
-    if n % 2 != 0: median = sorted_list[n // 2]
+    if n % 2 != 0: median = sorted_list[n // 2] # if n is odd, it picks the middle value
     else: 
-        m1 = sorted_list[n // 2 - 1]
+        m1 = sorted_list[n // 2 - 1] #if n is even, it picks the average of the 2 middle value
         m2 = sorted_list[n // 2]
         median = (m1 + m2) / 2
     
