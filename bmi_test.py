@@ -13,4 +13,11 @@ def calculate_bmi(height, weight):
     else:
         print("Over Weight")
 
-calculate_bmi(weight=87,height=1.73)
+# Prompt the user for input
+try:
+    height = float(input("Enter your height in meters: "))  # Convert input to float
+    weight = float(input("Enter your weight in kilograms: "))  # Convert input to float
+
+    calculate_bmi(height, weight)  # Call the function with user inputs
+except ValueError:
+    print("Invalid input! Please enter numeric values for height and weight.")
